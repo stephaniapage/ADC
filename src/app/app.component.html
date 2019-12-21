@@ -1,10 +1,55 @@
-<app-header></app-header>
+<ng-sidebar-container (onBackdropClicked)="_onBackdropClicked()">
+ 
+    <!-- A sidebar -->
+    <ng-sidebar [(opened)]="_opened"
+    [mode]="_MODES[_modeNum]"
+    [keyClose]="_keyClose"
+    [position]="_POSITIONS[_positionNum]"
+    [dock]="_dock"
+    [dockedSize]="'50px'"
+    [autoCollapseHeight]="_autoCollapseHeight"
+    [autoCollapseWidth]="_autoCollapseWidth"
+    [closeOnClickOutside]="_closeOnClickOutside"
+    [closeOnClickBackdrop]="_closeOnClickBackdrop"
+    [showBackdrop]="_showBackdrop"
+    [animate]="_animate"
+    [trapFocus]="_trapFocus"
+    [autoFocus]="_autoFocus"
+    [ariaLabel]="'My sidebar'"
+    (onOpenStart)="_onOpenStart()"
+    (onOpened)="_onOpened()"
+    (onCloseStart)="_onCloseStart()"
+    (onClosed)="_onClosed()"
+    (onTransitionEnd)="_onTransitionEnd()">
 
-<div class="pages-container">
-<router-outlet></router-outlet>
-</div>
+        <a (click)="setTitle('ADCreativ - Qui suis-je?')" 
+        routerLink="aboutMe">Qui suis-je?</a>
+        <a (click)="setTitle('ADCreativ - Références')" 
+        routerLink="clients">Références</a>
+        <a (click)="setTitle('ADCreativ - Contact')" 
+        routerLink="contact">Contact</a>
 
-<app-footer></app-footer>
+        <button (click)="_toggleOpened()">Fermer</button>
+        <p><a closeSidebar></a></p>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+      <button class="button" (click)="_toggleOpened()">Ouvrir</button>
+      
+      <section class="contents">
+      <app-header></app-header>
+      <div class="pages-container">
+        <router-outlet></router-outlet>
+        </div>
+        
+        <app-footer></app-footer>
+    </section>
+    </div>
+
+  </ng-sidebar-container>
+
+
 
 
 

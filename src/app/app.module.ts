@@ -2,6 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { SidebarModule } from 'ng-sidebar';
 
 
 //Components:
@@ -40,9 +41,9 @@ const ROUTES: Route[] = [
   {path: 'communication/logos', component: LogosComponent},
   {path: 'communication/POSDisplay', component: POSDisplayComponent},
   {path: 'communication/printAdvert', component: PrintAdvertComponent},
-  {path: 'sidebar/aboutMe', component: AboutMeComponent},
-  {path: 'sidebar/clients', component: ClientsComponent},
-  {path: 'sidebar/contact', component: ContactComponent},
+  {path: 'aboutMe', component: AboutMeComponent},
+  {path: 'clients', component: ClientsComponent},
+  {path: 'contact', component: ContactComponent},
   {path: 'footer/legalNotice', component: LegalNoticeComponent},
   {path: '**', component: Error404Component}
 ]
@@ -73,7 +74,8 @@ const ROUTES: Route[] = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
+    FormsModule,
+    SidebarModule.forRoot()
   ],
   providers: [Title],
   bootstrap: [AppComponent]
