@@ -1,0 +1,35 @@
+<nav>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" 
+      id="nav-home-tab" 
+      data-toggle="tab"
+      (click)="setTitle('ADCreativ - Accueil')" 
+      routerLink="home" 
+      role="tab" 
+      aria-controls="nav-home" 
+      aria-selected="true">Accueil</a>
+      <a class="nav-item nav-link" 
+      id="nav-packaging-tab" 
+      data-toggle="tab"
+      (click)="setTitle('ADCreativ - Packaging')" 
+      routerLink="packaging" 
+      role="tab" 
+      aria-controls="nav-packaging" 
+      aria-selected="false">Packaging</a>
+      <a class="nav-item nav-link" 
+      id="nav-communication-tab" 
+      data-toggle="tab" 
+      (click)="setTitle('ADCreativ - Communication')"
+      routerLink="communication" 
+      role="tab" 
+      aria-controls="nav-communication" 
+      aria-selected="false">Communication</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+    <div class="tab-pane fade" id="nav-packaging" role="tabpanel" aria-labelledby="nav-packaging-tab"></div>
+    <div class="tab-pane fade" id="nav-communication" role="tabpanel" aria-labelledby="nav-communication-tab"></div>
+  </div>
+</nav>

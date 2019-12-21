@@ -1,0 +1,23 @@
+footer {
+    bottom: 0;
+    width: 100%;
+    padding-top: 40px;
+    height: 90px;
+    background: #100c08;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #facebook {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+
+  #instagram {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
