@@ -10,6 +10,16 @@ footer {
     gap: 15px;
   }
 
+  a {
+    color:#696969;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
   #facebook {
     cursor: pointer;
     width: 32px;

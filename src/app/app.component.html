@@ -22,6 +22,10 @@
     (onClosed)="_onClosed()"
     (onTransitionEnd)="_onTransitionEnd()">
 
+    <button type="button" class="close" aria-label="Close">
+      <a aria-hidden="true" closeSidebar>&times;</a>
+    </button>
+
     <ul class="nav flex-column">
       <li class="nav-item"><a (click)="setTitle('ADCreativ - Qui suis-je?')" 
         routerLink="aboutMe">Qui suis-je?</a></li>
@@ -31,8 +35,7 @@
         routerLink="contact">Contact</a></li>
     </ul>
 
-        <button (click)="_toggleOpened()">Fermer</button>
-        <p><a closeSidebar></a></p>
+        
     </ng-sidebar>
 
     <!-- Page content -->
