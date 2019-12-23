@@ -25,7 +25,7 @@ import { PrintAdvertComponent } from './components/communication/print-advert/pr
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { LegalNoticeComponent } from './components/footer/legal-notice/legal-notice.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { Error404Component } from './components/error404/error404.component';
 
 const ROUTES: Route[] = [
@@ -44,7 +44,7 @@ const ROUTES: Route[] = [
   {path: 'aboutMe', component: AboutMeComponent},
   {path: 'clients', component: ClientsComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'footer/legalNotice', component: LegalNoticeComponent},
+  {path: 'legalNotice', component: LegalNoticeComponent},
   {path: '**', component: Error404Component}
 ]
 

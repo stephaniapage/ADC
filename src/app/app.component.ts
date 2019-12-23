@@ -10,10 +10,9 @@ export class AppComponent {
 
   private _opened: boolean = false;
   private _modeNum: number = 0;
-  private _positionNum: number = 0;
   private _dock: boolean = false;
-  private _closeOnClickOutside: boolean = false;
-  private _closeOnClickBackdrop: boolean = false;
+  private _closeOnClickOutside: boolean = true;
+  private _closeOnClickBackdrop: boolean = true;
   private _showBackdrop: boolean = false;
   private _animate: boolean = true;
   private _trapFocus: boolean = true;
@@ -23,7 +22,6 @@ export class AppComponent {
   private _autoCollapseWidth: number = null;
 
   private _MODES: Array<string> = ['over', 'push', 'slide'];
-  private _POSITIONS: Array<string> = ['left', 'right', 'top', 'bottom'];
 
   private _toggleOpened(): void {
     this._opened = !this._opened;
@@ -43,14 +41,6 @@ export class AppComponent {
 
   private _toggleAutoCollapseWidth(): void {
     this._autoCollapseWidth = this._autoCollapseWidth ? null : 500;
-  }
-
-  private _togglePosition(): void {
-    this._positionNum++;
-
-    if (this._positionNum === this._POSITIONS.length) {
-      this._positionNum = 0;
-    }
   }
 
   private _toggleDock(): void {

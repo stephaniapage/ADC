@@ -4,7 +4,7 @@
     <ng-sidebar [(opened)]="_opened"
     [mode]="_MODES[_modeNum]"
     [keyClose]="_keyClose"
-    [position]="_POSITIONS[_positionNum]"
+    position="right"
     [dock]="_dock"
     [dockedSize]="'50px'"
     [autoCollapseHeight]="_autoCollapseHeight"
@@ -22,12 +22,14 @@
     (onClosed)="_onClosed()"
     (onTransitionEnd)="_onTransitionEnd()">
 
-        <a (click)="setTitle('ADCreativ - Qui suis-je?')" 
-        routerLink="aboutMe">Qui suis-je?</a>
-        <a (click)="setTitle('ADCreativ - Références')" 
-        routerLink="clients">Références</a>
-        <a (click)="setTitle('ADCreativ - Contact')" 
-        routerLink="contact">Contact</a>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a (click)="setTitle('ADCreativ - Qui suis-je?')" 
+        routerLink="aboutMe">Qui suis-je?</a></li>
+      <li class="nav-item"><a (click)="setTitle('ADCreativ - Références')" 
+        routerLink="clients">Références</a></li>
+      <li class="nav-item"><a (click)="setTitle('ADCreativ - Contact')" 
+        routerLink="contact">Contact</a></li>
+    </ul>
 
         <button (click)="_toggleOpened()">Fermer</button>
         <p><a closeSidebar></a></p>
@@ -35,7 +37,7 @@
 
     <!-- Page content -->
     <div ng-sidebar-content>
-      <button class="button" (click)="_toggleOpened()">Ouvrir</button>
+      <img class="sidebarIcon" src="assets/images/hamburgericon1.png" alt="Sidebar icon" (click)="_toggleOpened()">
       
       <section class="contents">
       <app-header></app-header>
