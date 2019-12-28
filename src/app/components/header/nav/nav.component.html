@@ -1,18 +1,19 @@
 <nav>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active" 
+      <!-- <a class="nav-item nav-link active" 
       id="nav-home-tab" 
       data-toggle="tab"
       (click)="setTitle('ADCreativ - Accueil')" 
       routerLink="home" 
       role="tab" 
       aria-controls="nav-home" 
-      aria-selected="true">Accueil</a>
+      aria-selected="true">Accueil</a> -->
       <a class="nav-item nav-link" 
       id="nav-packaging-tab" 
       data-toggle="tab"
-      (click)="setTitle('ADCreativ - Packaging')" 
+      (click)="setTitle('ADCreativ - Packaging')"
+      (click)="changeBGtoBrown($event)"
       routerLink="packaging" 
       role="tab" 
       aria-controls="nav-packaging" 
@@ -21,6 +22,7 @@
       id="nav-communication-tab" 
       data-toggle="tab" 
       (click)="setTitle('ADCreativ - Communication')"
+      (click)="changeBGtoBrown($event)"
       routerLink="communication" 
       role="tab" 
       aria-controls="nav-communication" 

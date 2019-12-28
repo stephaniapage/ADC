@@ -22,7 +22,6 @@ import { LeafletsComponent } from './components/communication/leaflets/leaflets.
 import { LogosComponent } from './components/communication/logos/logos.component';
 import { POSDisplayComponent } from './components/communication/posdisplay/posdisplay.component';
 import { PrintAdvertComponent } from './components/communication/print-advert/print-advert.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
@@ -41,7 +40,6 @@ const ROUTES: Route[] = [
   {path: 'communication/logos', component: LogosComponent},
   {path: 'communication/POSDisplay', component: POSDisplayComponent},
   {path: 'communication/printAdvert', component: PrintAdvertComponent},
-  {path: 'aboutMe', component: AboutMeComponent},
   {path: 'clients', component: ClientsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'legalNotice', component: LegalNoticeComponent},
@@ -65,7 +63,6 @@ const ROUTES: Route[] = [
     LogosComponent,
     POSDisplayComponent,
     PrintAdvertComponent,
-    AboutMeComponent,
     ClientsComponent,
     ContactComponent,
     LegalNoticeComponent,

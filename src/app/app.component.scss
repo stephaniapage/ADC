@@ -1,3 +1,10 @@
+.container-fluid {
+    background: url("src/assets/images/EfferveSens_Les-bourdeaux.jpg") #100c08;
+    background-size: cover;
+    margin: 0 auto;
+    padding-right: 0px;
+}
+
 ng-sidebar-container {
     height: 100vh;
 }
@@ -6,6 +13,7 @@ ng-sidebar-container {
     cursor: pointer;
     float: right;
     margin-top: 50px;
+    margin-right: 30px;
 }
 
 
