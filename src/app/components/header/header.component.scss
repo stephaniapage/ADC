@@ -6,12 +6,11 @@
 
 .row {
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-// h1 {
-//     padding-left: 30px;
-// }
-
-// .sidebar {
-//     cursor: pointer;
-// }
+.nav {
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+}
