@@ -1,20 +1,24 @@
 <h2>Ils me font confiance:</h2>
 
-<ul>
-  <li>ALAIN CHABANON</li>
-  <li>CASTELBARRY</li>
-  <li>CASTELMAURE</li>
-  <li>CAZES</li>
-  <li>DOMAINE ROCHE</li>
-  <li>HAUT LIROU</li>
-  <li>JOSEPH CASTAN</li>
-  <li>CHATEAU SAINT JEAN D’AUMIERES</li>
-  <li>CHATEAU SAINT LOUIS LA PERDRIX</li>
-  <li>JACQUES FRELIN</li>
-  <li>VIGNERONS DE MARGUERITTES</li>
-  <li>JEANJEAN</li>
-  <li>MAS DE LAVAIL</li>
-  <li>RHONEA</li>
-  <li>VIGNOBLES TRAMIER</li>
-  <li>SAVARY DE BEAUREGARD</li>
-</ul>
+
+<!-- <ul class=row *ngFor="let c of clients; let i = index">
+  <li class="col-6" *ngIf="i % 2 == 0">{{c.name[i]}}</li>
+  <li class="col-6" *ngIf="i % 2 != 0">{{c.name[i]}}</li>
+</ul> -->
+
+<!-- <table>
+  <tr>
+    <td *ngFor="let c of clients; let i = index" *ngIf="i % 2 == 0">{{c.name}}</td>
+    <td *ngFor="let c of clients; let i = index" *ngIf="i % 2 != 0">{{c.name}}</td>
+  </tr>
+</table> -->
+
+<table>
+  <ng-container *ngFor="let col of clients; let i = index">
+      <tr *ngIf="i % 2 == 0">
+          <td>{{col.name}}</td>
+          <td>{{i < clients.length - 1 ? clients[i + 1].name : ""}}</td>
+      </tr>
+  </ng-container>
+</table>
+

@@ -25,15 +25,11 @@ export class AppComponent {
     this._opened = !this._opened;
   }
 
-  private _onOpenStart(): void {
-    console.info('Sidebar opening');
-  }
-
-  private _onOpened(): void {
-    console.info('Sidebar opened');
-  }
-
   constructor(){
+}
+
+changeBGtoBrown(event){
+  document.getElementById("bgDiv").style.background = "#100c08";
 }
 
 }

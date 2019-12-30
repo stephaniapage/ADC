@@ -6,8 +6,6 @@
     mode="over"
     [keyClose]="_keyClose"
     position="right"
-    [dock]="_dock"
-    [dockedSize]="'50px'"
     [autoCollapseHeight]="_autoCollapseHeight"
     [autoCollapseWidth]="_autoCollapseWidth"
     [closeOnClickOutside]="_closeOnClickOutside"
@@ -29,11 +27,11 @@
 
     <ul class="nav flex-column">
       <li class="nav-item"><p (click)="setTitle('ADCreativ - Références')" 
-        routerLink="clients">Références</p></li>
+        (click)="changeBGtoBrown($event)" routerLink="clients">Références</p></li>
       <li class="nav-item"><p (click)="setTitle('ADCreativ - Contact')" 
-        routerLink="contact">Contact</p></li>
+        (click)="changeBGtoBrown($event)" routerLink="contact">Contact</p></li>
       <li class="nav-item"><p (click)="setTitle('ADCreativ - Mentions légales')" 
-          routerLink="legalNotice">Mentions légales</p></li>
+        (click)="changeBGtoBrown($event)" routerLink="legalNotice">Mentions légales</p></li>
 
     </ul>
 
