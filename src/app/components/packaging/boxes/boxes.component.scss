@@ -1,4 +1,5 @@
 
+
 h2 {
     color: white;
 }
@@ -19,12 +20,27 @@ img {
     height: 300px;
     width: auto;
     padding-right: 40px;
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
 }
 
 img:hover {
    transform: scale(3) translate(40px);
+}
+
+.castelcubi {
+    transition: transform 0.5s ease;
+    cursor: zoom-in;
+    
+    &:hover {
+        transform: scale(2) translate(-40px);
+    }
+}
+.coopains {
+    transition: transform 0.5s ease;
+    cursor: zoom-in;
+    
+    &:hover {
+        transform: scale(2) translate(40px);
+    }
 }
 
 .box {
