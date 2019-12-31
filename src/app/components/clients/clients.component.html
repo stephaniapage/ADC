@@ -3,8 +3,8 @@
 <table>
   <ng-container *ngFor="let col of clients; let i = index">
       <tr *ngIf="i % 2 == 0">
-          <td>{{col.name}}</td>
-          <td>{{i < clients.length - 1 ? clients[i + 1].name : ""}}</td>
+          <td><a href={{col.link}} target="_blank"><img src="{{col.logo}}" alt={{col.name}}></a></td>
+          <td><a href="{{clients[i + 1].link}}" target="_blank"><img src="{{clients[i + 1].logo}}" alt={{clients.name}}></a></td>
       </tr>
   </ng-container>
 </table>
