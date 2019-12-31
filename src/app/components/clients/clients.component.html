@@ -1,18 +1,5 @@
 <h2>Ils me font confiance:</h2>
 
-
-<!-- <ul class=row *ngFor="let c of clients; let i = index">
-  <li class="col-6" *ngIf="i % 2 == 0">{{c.name[i]}}</li>
-  <li class="col-6" *ngIf="i % 2 != 0">{{c.name[i]}}</li>
-</ul> -->
-
-<!-- <table>
-  <tr>
-    <td *ngFor="let c of clients; let i = index" *ngIf="i % 2 == 0">{{c.name}}</td>
-    <td *ngFor="let c of clients; let i = index" *ngIf="i % 2 != 0">{{c.name}}</td>
-  </tr>
-</table> -->
-
 <table>
   <ng-container *ngFor="let col of clients; let i = index">
       <tr *ngIf="i % 2 == 0">
