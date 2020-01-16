@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -25,7 +26,11 @@ export class AppComponent {
     this._opened = !this._opened;
   }
 
-  constructor(){
+  constructor(private titleService: Title){
+}
+
+public setTitle( newTitle: string) {
+  this.titleService.setTitle( newTitle );
 }
 
 changeBGtoBrown(event){
