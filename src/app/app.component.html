@@ -1,7 +1,7 @@
 <div class="container-fluid" id="bgDiv">
-  <figure></figure>
-	<figure></figure>
-	<figure></figure>
+  <figure id="fig1"></figure>
+	<figure id="fig2"></figure>
+	<figure id="fig3"></figure>
 <ng-sidebar-container (onBackdropClicked)="_onBackdropClicked()">
  
     <!-- A sidebar -->
@@ -46,7 +46,7 @@
       <img class="sidebarIcon" src="assets/images/hamburgericon1.png" alt="Sidebar icon" (click)="_toggleOpened()">
       
       <section class="contents">
-      <app-header></app-header>
+      <app-header (navClick)="changeBGtoBrown($event)"></app-header>
       <div class="pages-container">
         <router-outlet></router-outlet>
         </div>

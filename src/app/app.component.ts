@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'ADCreativ';
@@ -29,7 +29,11 @@ export class AppComponent {
 }
 
 changeBGtoBrown(event){
-  document.getElementById("bgDiv").style.background = "#100c08";
+  // document.getElementById("bgDiv").style.background = "#100c08";
+  // document.getElementById("bgDiv").style.animationPlayState="paused";
+  document.getElementById("fig1").style.display = "none";
+    document.getElementById("fig2").style.display = "none";
+    document.getElementById("fig3").style.display = "none";
 }
 
 }
