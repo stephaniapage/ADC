@@ -19,11 +19,13 @@ export class HeaderComponent implements OnInit {
   }
 
   @Output() navClick = new EventEmitter();
+  @Output() logoClick = new EventEmitter();
 
-  // changeBGtoImage(event){
-  //   document.getElementById("bgDiv").style.background = "url('assets/images/EfferveSens_Les-bourdeaux.jpg')";
-  //   document.getElementById("bgDiv").style.backgroundSize = "cover";
-  // }
+  changeBGtoImage(event){
+    // document.getElementById("bgDiv").style.background = "url('assets/images/EfferveSens_Les-bourdeaux.jpg')";
+    // document.getElementById("bgDiv").style.backgroundSize = "cover";
+    this.logoClick.emit(event);
+  }
 
   changeBGtoBrown(event){
     // document.getElementById("bgDiv").style.background = "#100c08";

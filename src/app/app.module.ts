@@ -26,6 +26,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { Error404Component } from './components/error404/error404.component';
+import { AgendaComponent } from './components/agenda/agenda.component';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},
@@ -43,6 +44,7 @@ const ROUTES: Route[] = [
   {path: 'clients', component: ClientsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'mentionslegales', component: LegalNoticeComponent},
+  {path: 'agenda', component: AgendaComponent},
   {path: '**', component: Error404Component}
 ]
 
@@ -67,6 +69,7 @@ const ROUTES: Route[] = [
     ContactComponent,
     LegalNoticeComponent,
     Error404Component,
+    AgendaComponent,
   ],
   imports: [
     BrowserModule,

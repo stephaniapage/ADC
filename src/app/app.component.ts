@@ -29,16 +29,22 @@ export class AppComponent {
   constructor(private titleService: Title){
 }
 
-public setTitle( newTitle: string) {
-  this.titleService.setTitle( newTitle );
+public setTitle(newTitle: string) {
+  this.titleService.setTitle(newTitle);
 }
 
 changeBGtoBrown(event){
   // document.getElementById("bgDiv").style.background = "#100c08";
   // document.getElementById("bgDiv").style.animationPlayState="paused";
-  document.getElementById("fig1").style.display = "none";
-    document.getElementById("fig2").style.display = "none";
-    document.getElementById("fig3").style.display = "none";
+  document.getElementById("fig1").style.visibility = "hidden";
+    document.getElementById("fig2").style.visibility = "hidden";
+    document.getElementById("fig3").style.visibility = "hidden";
+}
+
+changeBGtoImage(event){
+  document.getElementById("fig1").style.visibility = "visible";
+    document.getElementById("fig2").style.visibility = "visible";
+    document.getElementById("fig3").style.visibility = "visible";
 }
 
 }

@@ -21,22 +21,33 @@ img {
     padding-right: 40px;
 }
 
+#zoomRhonea {
+    display: none;
+  }
+
 .rhonea {
     transition: transform 0.5s ease;
     cursor: zoom-in;
-    
-    &:hover {
-        transform: translate(-40px) scale(2);
-    }
 }
+
+#zoomRhonea:checked ~ label > img {
+    transform: translate(-40px) scale(2);
+    cursor: zoom-out;
+  }
+
+#zoomDaronton {
+    display: none;
+  }
+
 .daronton {
     transition: transform 0.5s ease;
     cursor: zoom-in;
-    
-    &:hover {
-        transform: translate(40px) scale(2);
-    }
 }
+
+#zoomDaronton:checked ~ label > img {
+    transform: translate(40px) scale(2);
+    cursor: zoom-out;
+  }
 
 .box {
     display: flex;

@@ -35,6 +35,8 @@
         (click)="changeBGtoBrown($event)" routerLink="contact" closeSidebar>Contact</p></li>
       <li class="nav-item"><p (click)="setTitle('ADCreativ - Mentions légales')" 
         (click)="changeBGtoBrown($event)" routerLink="mentionslegales" closeSidebar>Mentions légales</p></li>
+        <li class="nav-item"><p (click)="setTitle('ADCreativ - Agenda')" 
+          (click)="changeBGtoBrown($event)" routerLink="agenda" closeSidebar>Agenda</p></li>
 
     </ul>
 
@@ -46,7 +48,7 @@
       <img class="sidebarIcon" src="assets/images/hamburgericon1.png" alt="Sidebar icon" (click)="_toggleOpened()">
       
       <section class="contents">
-      <app-header (navClick)="changeBGtoBrown($event)"></app-header>
+      <app-header (navClick)="changeBGtoBrown($event)" (logoClick)="changeBGtoImage($event)"></app-header>
       <div class="pages-container">
         <router-outlet></router-outlet>
         </div>
