@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
+  // Tableau d'objets avec les propriétés des clients:
+
   clients = [
     {name: "ALAIN CHABANON",
     logo: "assets/images/logos_clients/logo-chabanon.png",

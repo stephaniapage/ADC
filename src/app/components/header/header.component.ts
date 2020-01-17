@@ -22,16 +22,10 @@ export class HeaderComponent implements OnInit {
   @Output() logoClick = new EventEmitter();
 
   changeBGtoImage(event){
-    // document.getElementById("bgDiv").style.background = "url('assets/images/EfferveSens_Les-bourdeaux.jpg')";
-    // document.getElementById("bgDiv").style.backgroundSize = "cover";
     this.logoClick.emit(event);
   }
 
   changeBGtoBrown(event){
-    // document.getElementById("bgDiv").style.background = "#100c08";
-    // document.getElementById("fig1").style.display = "none";
-    // document.getElementById("fig2").style.display = "none";
-    // document.getElementById("fig3").style.display = "none";
     this.navClick.emit(event);
   }
 

@@ -70,3 +70,13 @@ img {
     align-items:center;
     width: 80%;
 }
+
+@media screen and (max-width: 640px){
+  .box{
+    display: block;
+    width: 100%;
+  }
+  p, a {
+    width: 100%;
+  }
+}

@@ -34,8 +34,6 @@ public setTitle(newTitle: string) {
 }
 
 changeBGtoBrown(event){
-  // document.getElementById("bgDiv").style.background = "#100c08";
-  // document.getElementById("bgDiv").style.animationPlayState="paused";
   document.getElementById("fig1").style.visibility = "hidden";
     document.getElementById("fig2").style.visibility = "hidden";
     document.getElementById("fig3").style.visibility = "hidden";

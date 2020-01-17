@@ -1,5 +1,7 @@
 <h2>Ils me font confiance:</h2>
 
+<!-- Table créée de façon automatisée avec une boucle à partir du tableau d'objets contenant les propriétés des clients dans le contrôleur. La boucle parcourt le tableau et, pour chaque index pair, elle récupère les valeurs des propriétés pour l'afficher dans la colonne de gauche du tableau html de la vue, puis elle afiche les valeurs des propriétés de l'index suivant dans la colonne de droite de ce même tableau html. -->
+
 <table>
   <ng-container *ngFor="let col of clients; let i = index">
       <tr *ngIf="i % 2 == 0">
