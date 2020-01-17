@@ -24,10 +24,14 @@
     (onClosed)="_onClosed()"
     (onTransitionEnd)="_onTransitionEnd()">
 
-    <button type="button" class="close" aria-label="Close">
-      <a aria-hidden="true" closeSidebar>&times;</a>
-    </button>
+    <a closeSidebar>
+    <!-- <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
 
+    <span class="close warp thick"></span>
+
+    
     <ul class="nav flex-column">
       <li class="nav-item"><p (click)="setTitle('ADCreativ - Clients')" 
         (click)="changeBGtoBrown($event)" routerLink="clients" closeSidebar>Clients</p></li>
@@ -39,7 +43,7 @@
           (click)="changeBGtoBrown($event)" routerLink="agenda" closeSidebar>Agenda</p></li>
 
     </ul>
-
+  </a>
         
     </ng-sidebar>
 

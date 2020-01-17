@@ -50,6 +50,7 @@ imageAnimation {  0% {
 
 ng-sidebar-container {
     height: 100vh;
+    user-select: none;
 }
 
 .sidebarIcon {
@@ -59,4 +60,67 @@ ng-sidebar-container {
     margin-right: 30px;
 }
 
+// button {
+//   font-size: 50px;
+// }
 
+$blue: #A8E6CE;
+
+
+.close{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  &:hover {
+    &::before, &::after {
+      background: $blue;
+      cursor: pointer;
+    }
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #000;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  
+  &.thick {
+    &::before, &::after {
+      height: 4px;
+      margin-top: -2px;
+    }
+  }
+  
+  &.warp {
+    &::before, &::after {
+      border-radius: 120% 0;
+    }
+  }
+}
+
+small {
+  display: block;
+  padding: 5rem;
+  font: .8rem/1 sans-serif;
+  color: #777;
+  text-align: center;
+}
+small a { 
+  color: $blue; 
+  text-decoration: none; 
+  border-bottom: 1px solid #ccc; 
+}
+small a:hover { border-bottom-color: #222; }
