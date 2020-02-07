@@ -1,8 +1,9 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 //Components:
@@ -28,7 +29,6 @@ import { LegalNoticeComponent } from './components/legal-notice/legal-notice.com
 import { Error404Component } from './components/error404/error404.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AlexandraComponent } from './components/alexandra/alexandra.component';
-import { AdminAgendaComponent } from './components/admin-agenda/admin-agenda.component';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},
@@ -48,7 +48,6 @@ const ROUTES: Route[] = [
   {path: 'mentionslegales', component: LegalNoticeComponent},
   {path: 'agenda', component: AgendaComponent},
   {path: 'alexandra', component: AlexandraComponent},
-  {path: 'monagenda', component: AdminAgendaComponent},
   {path: '**', component: Error404Component}
 ]
 
@@ -75,12 +74,13 @@ const ROUTES: Route[] = [
     Error404Component,
     AgendaComponent,
     AlexandraComponent,
-    AdminAgendaComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     SidebarModule.forRoot()
   ],
   providers: [Title],

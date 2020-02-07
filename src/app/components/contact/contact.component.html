@@ -1,9 +1,49 @@
 <h2>Contact</h2>
 
-<form action="">
-<input type="text" class="form-control" placeholder="Nom">  
-<input type="text" class="form-control" placeholder="Email">  
-<input type="text" class="form-control" placeholder="Sujet">  
-<textarea name="message" id="" cols="30" rows="10" class="form-control" placeholder="Votre message"></textarea>
+<form [formGroup]="contactForm" (ngSubmit)="create()">
+<label for="name">Nom</label>
+    <input type="text" class="form-control" formControlName="name" id="name">
+
+    <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+     class="alert alert-danger">
+        <span>
+            Veuillez saisir votre nom.
+        </span>
+    </div>
+
+<label for="email">Email</label>
+    <input type="text" class="form-control" formControlName="email" id="email">
+
+    <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
+     class="alert alert-danger">
+        <span>
+            Veuillez saisir votre email.
+        </span>
+    </div>
+
+<label for="subject">Sujet</label>
+    <input type="text" class="form-control" formControlName="subject" id="subject">
+    
+    <div *ngIf="contactForm.controls['subject'].invalid && contactForm.controls['subject'].touched"
+     class="alert alert-danger">
+        <span>
+            Veuillez saisir le sujet de votre message.
+        </span>
+    </div>
+
+<label>Message</label>
+    <textarea name="message" id="" cols="30" rows="10" class="form-control" formControlName="message" id="message"></textarea>
+
+    <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
+     class="alert alert-danger">
+        <span>
+            Veuillez saisir votre message.
+        </span>
+    </div>
 <button type="submit" class="btn btn-light">Envoyer</button>
+
+<div id="successmsg" class="alert alert-success" *ngIf="success">
+    <span>Votre message a bien été envoyé.</span>
+</div>
+
 </form>
