@@ -29,6 +29,7 @@ import { LegalNoticeComponent } from './components/legal-notice/legal-notice.com
 import { Error404Component } from './components/error404/error404.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AlexandraComponent } from './components/alexandra/alexandra.component';
+import { EditSalonComponent } from './edit-salon/edit-salon.component';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},
@@ -74,6 +75,7 @@ const ROUTES: Route[] = [
     Error404Component,
     AgendaComponent,
     AlexandraComponent,
+    EditSalonComponent,
   ],
   imports: [
     BrowserModule,

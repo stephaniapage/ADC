@@ -1,7 +1,21 @@
-<h2>Connexion à mon site</h2>
+<h2>Mon agenda</h2>
 
-<form action="">
-<input type="text" class="form-control" placeholder="Identifiant">  
-<input type="text" class="form-control" placeholder="Mot de passe">  
-<button type="submit" class="btn btn-light">Envoyer</button>
+<h3>Salons auxquels je participe</h3>
+
+<form [formGroup]="createForm" (ngSubmit)="create()">
+
+<label for="name">Nom</label>
+<input type="text" class="form-control" name="name" id="name">  
+
+<label for="place">Lieu</label>
+<input type="text" class="form-control" name="place" id="place">
+
+<label for="city">Ville</label>
+<input type="text" class="form-control" name="city" id="city">
+
+<label for="date">Date</label>
+<input type="date" class="form-control" name="date" id="date">
+
+
+<button type="submit" class="btn btn-light">Créer</button>
 </form>

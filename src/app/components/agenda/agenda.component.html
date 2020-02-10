@@ -1,16 +1,16 @@
 <h2>Agenda des salons</h2>
 
-<p>Voici mes prochaines participations à des salons professionnels autour du vin:</p>
+<h4>Mes prochaines participations à des salons professionnels autour du vin</h4>
 
 <table>
   <th>Nom</th>
   <th>Lieu</th>
   <th>Ville</th>
   <th>Date</th>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
+  <tr *ngFor="let salon of salons">
+    <td>{{salon.name}}</td>
+    <td>{{salon.place}}</td>
+    <td>{{salon.city}}</td>
+    <td>{{salon.date | date : 'dd/MM/yyyy' }}</td>
   </tr>
 </table>
