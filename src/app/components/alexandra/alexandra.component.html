@@ -1,21 +1,49 @@
 <h2>Mon agenda</h2>
 
-<h3>Salons auxquels je participe</h3>
+<h3>Créer mon prochain salon:</h3>
 
 <form [formGroup]="createForm" (ngSubmit)="create()">
 
 <label for="name">Nom</label>
-<input type="text" class="form-control" name="name" id="name">  
+<input type="text" class="form-control" formControlName="name" id="name">  
 
 <label for="place">Lieu</label>
-<input type="text" class="form-control" name="place" id="place">
+<input type="text" class="form-control" formControlName="place" id="place">
 
 <label for="city">Ville</label>
-<input type="text" class="form-control" name="city" id="city">
+<input type="text" class="form-control" formControlName="city" id="city">
 
 <label for="date">Date</label>
-<input type="date" class="form-control" name="date" id="date">
+<input type="date" class="form-control" formControlName="date" id="date">
 
 
 <button type="submit" class="btn btn-light">Créer</button>
+
 </form>
+
+<div id="successmsg" class="alert alert-success" *ngIf="success">
+    <span>Le salon a bien été créé.</span>
+</div>
+
+<h3>Gérer mes salons déjà saisis:</h3>
+
+<table class="table-responsive{-sm|-md|-lg|-xl} table-dark table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Nom</th>
+        <th>Lieu</th>
+        <th>Ville</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let salon of salons">
+        <td>{{salon.name}}</td>
+        <td>{{salon.place}}</td>
+        <td>{{salon.city}}</td>
+        <td>{{salon.date | date : 'dd/MM/yyyy' }}</td>
+        <td><a [routerLink]="['edit_salon', salon.id]"><img class="icon" src="../../../assets/images/edit_icon.svg"></a></td>
+        <td><a (click)="delete(salon.id)"><img class="icon" src="../../../assets/images/trash_icon.svg"></a></td>
+      </tr>
+    </tbody>
+  </table>

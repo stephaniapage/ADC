@@ -16,10 +16,12 @@ export class AlexandraComponent implements OnInit {
   city: FormControl;
   date: FormControl;
   createForm:FormGroup;
-  private success: Object;
+  private create_success: Object;
+  private delete_success: Object;
 
   constructor(private agendaService: AgendaService, private formBuilder: FormBuilder) { }
-
+  
+  salons: any;
   ngOnInit() {
     this.createForm = this.formBuilder.group({
       name: ['', [Validators.required]],
@@ -27,13 +29,7 @@ export class AlexandraComponent implements OnInit {
       city: ['', [Validators.required]],
       date: ['', [Validators.required]]
     });
-
-    this.createForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      place: ['', [Validators.required]],
-      city: ['', [Validators.required]],
-      date: ['', [Validators.required]]
-    });
+    this.list();
   }
 
   create(){
@@ -41,16 +37,37 @@ export class AlexandraComponent implements OnInit {
     console.log(salon);
     this.agendaService.create(salon).subscribe(
       (result: Salon) =>
-    this.success = {
+    this.create_success = {
       id: result.id,
       name: salon.name,
       place: salon.place,
       city: salon.city,
       date: salon.date
-
     }
     );
 
+  }
+
+  delete(){
+    
+    if (confirm("Êtes-vous sûre de vouloir supprimer ce salon?")) {
+      let salon:Salon;
+      this.agendaService.delete(salon.id).subscribe(
+        (result: Salon) =>
+          this.delete_success = {
+              id: result.id,
+              name: salon.name,
+              place: salon.place,
+              city: salon.city,
+              date: salon.date
+          });
+    }
+  }
+
+  list(){
+    this.agendaService.list().subscribe(
+      (result: any) => this.salons = result
+    )
   }
 
 }

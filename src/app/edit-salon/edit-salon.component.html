@@ -1,3 +1,22 @@
-<p>
-  edit-salon works!
-</p>
+<h2>Mon agenda</h2>
+
+<h3>Éditer le salon:</h3>
+
+<form [formGroup]="editForm" (ngSubmit)="edit()">
+
+<label for="name">Nom</label>
+<input type="text" class="form-control" formControlName="name" id="name">  
+
+<label for="place">Lieu</label>
+<input type="text" class="form-control" formControlName="place" id="place">
+
+<label for="city">Ville</label>
+<input type="text" class="form-control" formControlName="city" id="city">
+
+<label for="date">Date</label>
+<input type="date" class="form-control" formControlName="date" id="date">
+
+
+<button type="submit" class="btn btn-light">Éditer</button>
+
+</form>
