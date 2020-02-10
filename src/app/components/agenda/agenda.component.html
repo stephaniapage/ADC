@@ -2,15 +2,21 @@
 
 <h4>Mes prochaines participations à des salons professionnels autour du vin</h4>
 
-<table>
-  <th>Nom</th>
-  <th>Lieu</th>
-  <th>Ville</th>
-  <th>Date</th>
-  <tr *ngFor="let salon of salons">
-    <td>{{salon.name}}</td>
-    <td>{{salon.place}}</td>
-    <td>{{salon.city}}</td>
-    <td>{{salon.date | date : 'dd/MM/yyyy' }}</td>
-  </tr>
+<table class="table-responsive{-sm|-md|-lg|-xl} table-striped table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nom</th>
+      <th>Lieu</th>
+      <th>Ville</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let salon of salons">
+      <td>{{salon.name}}</td>
+      <td>{{salon.place}}</td>
+      <td>{{salon.city}}</td>
+      <td>{{salon.date | date : 'dd/MM/yyyy' }}</td>
+    </tr>
+  </tbody>
 </table>
