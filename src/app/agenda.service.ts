@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Salon } from './salon';
+import { AuthService } from './services/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AgendaService {
 
-  private uri = "http://127.0.0.1:8000/salon";
+  private uri = "http://127.0.0.1:8000/api/salon";
+  private headers;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authService: AuthService) { 
+    this.headers = new HttpHeaders();
+    this.headers.append('Concent-Type', 'application/json');
+  }
 
   list() {
     return this.http.get(this.uri);

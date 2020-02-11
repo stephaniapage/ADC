@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/auth-interceptor';
 
 
 //Components:
@@ -30,6 +31,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AlexandraComponent } from './components/alexandra/alexandra.component';
 import { EditSalonComponent } from './edit-salon/edit-salon.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},
@@ -77,6 +79,7 @@ const ROUTES: Route[] = [
     AgendaComponent,
     AlexandraComponent,
     EditSalonComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,7 +89,7 @@ const ROUTES: Route[] = [
     HttpClientModule,
     SidebarModule.forRoot()
   ],
-  providers: [Title],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

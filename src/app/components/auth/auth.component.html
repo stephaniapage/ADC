@@ -1,0 +1,11 @@
+<h2>Veuillez vous connecter</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="auth()">
+
+<label for="name">Identifiant</label>
+<input type="text" class="form-control" formControlName="username" id="username">
+
+<label for="name">Mot de passe</label>
+<input type="password" class="form-control" formControlName="password" id="password">
+
+</form>

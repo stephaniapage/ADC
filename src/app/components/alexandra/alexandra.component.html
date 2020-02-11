@@ -21,7 +21,7 @@
 
 </form>
 
-<div id="successmsg" class="alert alert-success" *ngIf="success">
+<div id="create_success" class="alert alert-success" *ngIf="create_success">
     <span>Le salon a bien été créé.</span>
 </div>
 
@@ -47,3 +47,7 @@
       </tr>
     </tbody>
   </table>
+
+  <div id="delete_success" class="alert alert-success" *ngIf="delete_success">
+    <span>Le salon a bien été supprimé.</span>
+</div>

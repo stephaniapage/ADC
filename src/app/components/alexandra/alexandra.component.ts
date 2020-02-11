@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AgendaService } from 'src/app/agenda.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Salon } from 'src/app/salon';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-alexandra',
@@ -19,7 +20,7 @@ export class AlexandraComponent implements OnInit {
   private create_success: Object;
   private delete_success: Object;
 
-  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder) { }
+  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder, authService: AuthService) { }
   
   salons: any;
   ngOnInit() {

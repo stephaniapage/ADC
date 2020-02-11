@@ -25,10 +25,10 @@ export class EditSalonComponent implements OnInit {
     this.agendaService.get(this.id);
 
     this.editForm = this.formBuilder.group({
-      name: ['salon.name', [Validators.required]],
-      place: ['salon.place', [Validators.required]],
-      city: ['salon.city', [Validators.required]],
-      date: ['salon.date', [Validators.required]]
+      name: [this.salon.name, [Validators.required]],
+      place: [this.salon.place, [Validators.required]],
+      city: [this.salon.city, [Validators.required]],
+      date: [this.salon.date, [Validators.required]]
     });
   }
 
