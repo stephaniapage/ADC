@@ -52,6 +52,7 @@ const ROUTES: Route[] = [
   {path: 'agenda', component: AgendaComponent},
   {path: 'alexandra', component: AlexandraComponent},
   {path: 'edit_salon/:id', component: EditSalonComponent, pathMatch: 'full'},
+  {path: 'login', component: AuthComponent},
   {path: '**', component: Error404Component}
 ]
 

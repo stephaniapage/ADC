@@ -30,7 +30,7 @@ export class AuthComponent implements OnInit {
     this.authService.auth(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
       //si l'authentification est validee, on ajoute le jwt dans le local storage
       (result: any) => {localStorage.setItem('jwt', result.token)
-      this.router.navigate(['agenda'])},
+      this.router.navigate(['alexandra'])},
       (error: any) => {console.error("error")
       if (error.status == 401){
         this.authError = {
