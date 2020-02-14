@@ -49,14 +49,15 @@ export class AlexandraComponent implements OnInit {
 
   }
 
-  delete(){
+  delete(salon:Salon){
     
     if (confirm("Êtes-vous sûre de vouloir supprimer ce salon?")) {
-      let salon:Salon;
+      //supprime le salon de la liste en apparence 
+      this.salons = this.salons.filter( s => s.id != salon.id);
       this.agendaService.delete(salon.id).subscribe(
         (result: Salon) =>
-          this.delete_success = {
-              id: result.id,
+        this.delete_success = {
+          id: result.id,
               name: salon.name,
               place: salon.place,
               city: salon.city,

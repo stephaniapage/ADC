@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AgendaService } from '../agenda.service';
 import { Salon } from '../salon';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-edit-salon',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class EditSalonComponent implements OnInit {
 
-  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private datePipe : DatePipe , private agendaService: AgendaService, private formBuilder: FormBuilder, private router: Router, private route : ActivatedRoute) { }
 
   salon: Salon;
   id: number;
@@ -23,20 +24,25 @@ export class EditSalonComponent implements OnInit {
   private success: Object;
   
   ngOnInit() {
-    this.agendaService.get(this.id);
+    this.id = this.route.snapshot.params.id;
+    this.agendaService.get(this.id).subscribe(
+      (result: Salon) => {
+        this.salon = result
+        this.editForm = this.formBuilder.group({
+          name: [this.salon.name, [Validators.required]],
+          place: [this.salon.place, [Validators.required]],
+          city: [this.salon.city, [Validators.required]],
+          date: [this.datePipe.transform(this.salon.date, "yyyy-MM-dd"), [Validators.required]]
+        });
+      } 
+    );
 
-    this.editForm = this.formBuilder.group({
-      name: [this.salon.name, [Validators.required]],
-      place: [this.salon.place, [Validators.required]],
-      city: [this.salon.city, [Validators.required]],
-      date: [this.salon.date, [Validators.required]]
-    });
   }
 
   edit(){
     let salon:Salon = this.editForm.value as Salon;
     console.log(salon);
-    this.agendaService.edit(salon.id, salon).subscribe(
+    this.agendaService.edit(this.id, salon).subscribe(
       (result: Salon) =>
     this.success = {
       id: result.id,

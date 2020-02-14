@@ -32,6 +32,7 @@ import { AgendaComponent } from './components/agenda/agenda.component';
 import { AlexandraComponent } from './components/alexandra/alexandra.component';
 import { EditSalonComponent } from './edit-salon/edit-salon.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { DatePipe } from '@angular/common';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},
@@ -90,7 +91,7 @@ const ROUTES: Route[] = [
     HttpClientModule,
     SidebarModule.forRoot()
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, Title],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, Title, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

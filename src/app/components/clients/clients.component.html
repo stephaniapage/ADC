@@ -2,12 +2,18 @@
 
 <!-- Table créée de façon automatisée avec une boucle à partir du tableau d'objets contenant les propriétés des clients dans le contrôleur. La boucle parcourt le tableau et, pour chaque index pair, elle récupère les valeurs des propriétés pour l'afficher dans la colonne de gauche du tableau html de la vue, puis elle afiche les valeurs des propriétés de l'index suivant dans la colonne de droite de ce même tableau html. -->
 
-<table>
-  <ng-container *ngFor="let col of clients; let i = index">
-      <tr *ngIf="i % 2 == 0">
-          <td><a href={{col.link}} target="_blank"><img src="{{col.logo}}" alt={{col.name}}></a></td>
-          <td><a href="{{clients[i + 1].link}}" target="_blank"><img src="{{clients[i + 1].logo}}" alt={{clients.name}}></a></td>
-      </tr>
-  </ng-container>
+<table *ngFor="let col of clients; let i = index">
+  <tr *ngIf="i % 2 == 0">
+    <td>
+      <a href={{col.link}} target="_blank">
+        <img src="{{col.logo}}" alt={{col.name}}>
+      </a>
+    </td>
+    <td>
+      <a href="{{clients[i + 1].link}}" target="_blank">
+        <img src="{{clients[i + 1].logo}}" alt={{clients.name}}>
+      </a>
+    </td>
+  </tr>
 </table>
 

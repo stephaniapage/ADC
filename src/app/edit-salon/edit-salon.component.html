@@ -1,7 +1,9 @@
 <h2>Mon agenda</h2>
 
-<h3>Éditer le salon: {{salon.name}}</h3>
+<div *ngIf="salon">
 
+    <h3>Éditer le salon: {{salon.name}}</h3>
+    
 <form [formGroup]="editForm" (ngSubmit)="edit()">
 
 <label for="name">Nom</label>
@@ -20,3 +22,5 @@
 <button type="submit" class="btn btn-light">Éditer</button>
 
 </form>
+
+</div>

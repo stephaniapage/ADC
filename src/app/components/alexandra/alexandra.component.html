@@ -43,7 +43,7 @@
         <td>{{salon.city}}</td>
         <td>{{salon.date | date : 'dd/MM/yyyy' }}</td>
         <td><a [routerLink]="['edit_salon', salon.id]"><img class="icon" src="../../../assets/images/edit_icon.svg"></a></td>
-        <td><a (click)="delete(salon.id)"><img class="icon" src="../../../assets/images/trash_icon.svg"></a></td>
+        <td><a (click)="delete(salon)"><img class="icon" src="../../../assets/images/trash_icon.svg"></a></td>
       </tr>
     </tbody>
   </table>
