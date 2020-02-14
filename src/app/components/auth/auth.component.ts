@@ -11,14 +11,13 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 export class AuthComponent implements OnInit {
 
   private authError;
-  username: FormControl;
-  password: FormControl;
-  loginForm:FormGroup;
+  private username: FormControl;
+  private password: FormControl;
+  private loginForm:FormGroup;
 
   constructor(private authService: AuthService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.auth();
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
@@ -29,7 +28,7 @@ export class AuthComponent implements OnInit {
     //le formulaire va appeler la méthode auth et passer ses valeurs dans les paramètres
     this.authService.auth(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
       //si l'authentification est validee, on ajoute le jwt dans le local storage
-      (result: any) => {localStorage.setItem('jwt', result.token)
+      (result: any) => {localStorage.setItem('jwt', result.token); 
       this.router.navigate(['alexandra'])},
       (error: any) => {console.error("error")
       if (error.status == 401){

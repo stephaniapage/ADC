@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AgendaService } from '../agenda.service';
 import { Salon } from '../salon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-salon',
@@ -19,7 +20,7 @@ export class EditSalonComponent implements OnInit {
   editForm:FormGroup;
   private success: Object;
 
-  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder) { }
+  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.agendaService.get(this.id);
@@ -45,7 +46,7 @@ export class EditSalonComponent implements OnInit {
       date: salon.date
     }
     );
-
+    this.router.navigate(['alexandra']);
   }
 
 }

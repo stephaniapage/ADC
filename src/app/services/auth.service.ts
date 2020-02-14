@@ -6,9 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
 
-  protected uri: string = "http://localhost:8000/api/login-check";
+  protected uri: string = "http://localhost:8000/api/login_check";
 
-  private headers;
+  private headers: HttpHeaders;
   private token: string = null;
 
   constructor(private http: HttpClient) { 
