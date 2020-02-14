@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class EditSalonComponent implements OnInit {
 
+  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder, private router: Router) { }
+
   salon: Salon;
   id: number;
   name: FormControl;
@@ -19,9 +21,7 @@ export class EditSalonComponent implements OnInit {
   date: FormControl;
   editForm:FormGroup;
   private success: Object;
-
-  constructor(private agendaService: AgendaService, private formBuilder: FormBuilder, private router: Router) { }
-
+  
   ngOnInit() {
     this.agendaService.get(this.id);
 
