@@ -8,12 +8,12 @@ import { AuthService } from './services/auth.service';
 })
 export class AgendaService {
 
-  private uri = "http://127.0.0.1:8000/api/salon";
+  private uri = "https://127.0.0.1:8000/api/salon";
   private headers;
 
   constructor(private http: HttpClient, private authService: AuthService) { 
     this.headers = new HttpHeaders();
-    this.headers.append('Concent-Type', 'application/json');
+    this.headers.append('Content-Type', 'application/json');
   }
 
   list() {

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './services/auth-interceptor';
+import { DatePipe } from '@angular/common';
 
 
 //Components:
@@ -32,7 +33,6 @@ import { AgendaComponent } from './components/agenda/agenda.component';
 import { AlexandraComponent } from './components/alexandra/alexandra.component';
 import { EditSalonComponent } from './edit-salon/edit-salon.component';
 import { AuthComponent } from './components/auth/auth.component';
-import { DatePipe } from '@angular/common';
 
 const ROUTES: Route[] = [
   {path: '', component: HomeComponent},

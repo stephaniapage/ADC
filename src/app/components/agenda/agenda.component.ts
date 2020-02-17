@@ -19,6 +19,7 @@ export class AgendaComponent implements OnInit {
     this.agendaService.list().subscribe(
       (result: any) => this.salons = result
     )
+    console.log(this.salons);
   }
 
 }
