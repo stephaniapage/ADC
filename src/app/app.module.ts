@@ -6,6 +6,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './services/auth-interceptor';
 import { DatePipe } from '@angular/common';
+import { LightboxModule } from 'ngx-lightbox';
 
 
 //Components:
@@ -89,7 +90,8 @@ const ROUTES: Route[] = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    LightboxModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, Title, DatePipe],
   bootstrap: [AppComponent]

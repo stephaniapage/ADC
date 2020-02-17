@@ -13,13 +13,6 @@ p {
     gap: 50px;
 }
 
-@media screen and (max-width: 640px){
-    .box{
-      display: block;
-      width: 100%;
-    }
-}
-
 #map {
     overflow:hidden;
     padding-bottom:56.25%;
@@ -36,4 +29,9 @@ p {
         }
     }
     
- 
+    @media screen and (max-width: 640px){
+        .box{
+          display: block;
+          width: 100%;
+        }
+    }

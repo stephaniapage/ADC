@@ -5,7 +5,7 @@
 <div class="box">
 <p>Conception de la charte graphique, choix des thèmes, couleurs et papiers en fonction du cahier des charges pour la coopérative <a href="https://montpeyroux.org/" target="_blank">Castelbarry</a></p>
 
-<input type="checkbox" id="zoomMontpeyroux1">
+<!-- <input type="checkbox" id="zoomMontpeyroux1">
   <label for="zoomMontpeyroux1">
 <img class="img-fluid montpeyroux1" src="assets/images/etiq/CSBR_AVENIR_RG-ecrase.jpg" alt="Avenir">
 </label>
@@ -14,14 +14,18 @@
   <label for="zoomMontpeyroux2">
 <img class="img-fluid montpeyroux2" src="assets/images/etiq/CSBR_SALUT_TERRE_RG-ecrase.jpg" alt="Salut de la Terre">
 </label>
-</div>
+</div> -->
 
+
+  <img src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Seul l'Avenir m'intéresse"/>
+  <img src="{{album[1].thumb}}" (click)="open(1)" height= "300px" alt="Le salut de la Terre"/>
+</div>
 
 <h4>Saint-Jean d'Aumières</h4>
 
 <div class="box">
 
-    <input type="checkbox" id="zoomAumieres1">
+    <!-- <input type="checkbox" id="zoomAumieres1">
         <label for="zoomAumieres1">
             <img class="img-fluid aumieres1" src="assets/images/etiq/jc_affranchis_rg.jpg" alt="L'affranchi">
         </label>
@@ -29,7 +33,10 @@
     <input type="checkbox" id="zoomAumieres2">
         <label for="zoomAumieres2">
             <img class="img-fluid aumieres2" src="assets/images/etiq/jc_arnacoeur_rs.jpg" alt="L'arnacoeur">
-        </label>
+        </label> -->
+
+  <img src="{{album[2].thumb}}" (click)="open(2)" height= "300px" alt="L'affranchi"/>
+  <img src="{{album[3].thumb}}" (click)="open(3)" height= "300px" alt="L'arnacoeur"/>
 
 <p>Conception de l'étiquette avec l'insertion de gravure dorée et choix du format de la bouteille à la demande du château <a href="https://saintjeandaumieres.com/" target="_blank">Saint-Jean d'Aumières</a></p>
 </div>

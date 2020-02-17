@@ -19,55 +19,56 @@ img {
     height: 300px;
     width: auto;
     padding-right: 40px;
+    cursor: pointer;
 }
 
-#zoomMontpeyroux1, #zoomMontpeyroux2 {
-    display: none;
-  }
+// #zoomMontpeyroux1, #zoomMontpeyroux2 {
+//     display: none;
+//   }
 
-.montpeyroux1 {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .montpeyroux1 {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomMontpeyroux1:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomMontpeyroux1:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-  .montpeyroux2 {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+//   .montpeyroux2 {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-  #zoomMontpeyroux2:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
+//   #zoomMontpeyroux2:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-#zoomAumieres1, #zoomAumieres2 {
-    display: none;
-  }
+// #zoomAumieres1, #zoomAumieres2 {
+//     display: none;
+//   }
 
-.aumieres1 {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .aumieres1 {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomAumieres1:checked ~ label > img {
-    transform: translate(50px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomAumieres1:checked ~ label > img {
+//     transform: translate(50px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-  .aumieres2 {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+//   .aumieres2 {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomAumieres2:checked ~ label > img {
-    transform: translate(50px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomAumieres2:checked ~ label > img {
+//     transform: translate(50px) scale(2);
+//     cursor: zoom-out;
+//   }
 
 .box {
     display: flex;
