@@ -1,3 +1,15 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class=" nav-item nav-link" routerLink="/packaging/cartons" (click)="setTitle('ADCreativ - Cartons')">Cartons</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/bibs" (click)="setTitle('ADCreativ - Bibs')">Bibs</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/huiledolive" (click)="setTitle('ADCreativ - Huile d Olive')">Huile d'Olive</a>
+  </li>
+</ul>
+
 <h2>Création d'étiquettes de vin</h2>
 
 <h4>Montpeyroux</h4>
@@ -17,8 +29,8 @@
 </div> -->
 
 
-  <img src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Seul l'Avenir m'intéresse"/>
-  <img src="{{album[1].thumb}}" (click)="open(1)" height= "300px" alt="Le salut de la Terre"/>
+  <img class="img-fluid" src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Seul l'Avenir m'intéresse"/>
+  <img class="img-fluid" src="{{album[1].thumb}}" (click)="open(1)" height= "300px" alt="Le salut de la Terre"/>
 </div>
 
 <h4>Saint-Jean d'Aumières</h4>
@@ -35,8 +47,8 @@
             <img class="img-fluid aumieres2" src="assets/images/etiq/jc_arnacoeur_rs.jpg" alt="L'arnacoeur">
         </label> -->
 
-  <img src="{{album[2].thumb}}" (click)="open(2)" height= "300px" alt="L'affranchi"/>
-  <img src="{{album[3].thumb}}" (click)="open(3)" height= "300px" alt="L'arnacoeur"/>
+  <img class="img-fluid" src="{{album[2].thumb}}" (click)="open(2)" height= "300px" alt="L'affranchi"/>
+  <img class="img-fluid" src="{{album[3].thumb}}" (click)="open(3)" height= "300px" alt="L'arnacoeur"/>
 
 <p>Conception de l'étiquette avec l'insertion de gravure dorée et choix du format de la bouteille à la demande du château <a href="https://saintjeandaumieres.com/" target="_blank">Saint-Jean d'Aumières</a></p>
 </div>

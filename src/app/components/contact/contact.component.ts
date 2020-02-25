@@ -9,7 +9,6 @@ import { Contact } from 'src/app/contact';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  
   prospect: any;
   email : FormControl;
   name: FormControl;
@@ -20,8 +19,6 @@ export class ContactComponent implements OnInit {
 
   constructor(private contactService: ContactService, private formBuilder: FormBuilder) { }
 
-  
-
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
         name: ['', [Validators.required]],
@@ -30,22 +27,17 @@ export class ContactComponent implements OnInit {
         message: ['', [Validators.required]]
       });
   }
-
   create(){
     let prospect:Contact = this.contactForm.value as Contact;
     console.log(prospect);
     this.contactService.create(prospect).subscribe(
-      (result: Contact) =>
-    this.success = {
-      id: result.id,
-      name: prospect.name,
-      email: prospect.email,
-      subject: prospect.subject,
-      message: prospect.message
-
-    }
+      (result: Contact) => this.success = {
+            id: result.id,
+            name: prospect.name,
+            email: prospect.email,
+            subject: prospect.subject,
+            message: prospect.message
+      }
     );
-
   }
-
 }

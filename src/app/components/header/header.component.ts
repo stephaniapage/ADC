@@ -29,4 +29,5 @@ export class HeaderComponent implements OnInit {
     this.navClick.emit(event);
   }
 
+  
 }

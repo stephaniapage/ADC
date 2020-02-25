@@ -1,3 +1,15 @@
+<ul class="nav">
+    <li class="nav-item">
+      <a class=" nav-item nav-link" routerLink="/communication/logos" (click)="setTitle('ADCreativ - Logos')">Logos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-item nav-link" routerLink="/communication/PLV" (click)="setTitle('ADCreativ - PLV')">PLV</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-item nav-link" routerLink="/communication/pubs" (click)="setTitle('ADCreativ - Pubs')">Pubs</a>
+    </li>
+  </ul>
+
 <h2>Création de plaquettes</h2>
 
 <h4>Terrasses du Larzac</h4>
@@ -5,7 +17,8 @@
 <div id="chabanon">
 <p>Mise en page de la plaquette du domaine, choix de la typographie, des textes et des images dans le respect de la charte graphique du domaine <a href="https://www.alainchabanon.com/" target="_blank">Alain Chabanon</a></p>
 
-<img class="img-fluid chabanon" src="assets/images/plaquette/Plaquette-AChabanon.jpg" alt="Plaquette Alain Chabanon">
+<!-- <img class="img-fluid chabanon" src="assets/images/plaquette/Plaquette-AChabanon.jpg" alt="Plaquette Alain Chabanon"> -->
+<img class="img-fluid chabanon" src="{{album[0].thumb}}" (click)="open(0)" alt="Plaquette Alain Chabanon"/>
 
 </div>
 
@@ -16,8 +29,10 @@
 <p>Conception de la plaquette publicitaire, mise en page des textes et des images et suivi graphique pour le domaine <a href="http://www.savarydebeauregard.com/index.php/fr/" target="_blank">Savary de Beauregard</a></p>
 
 <div id="savary">
-<img class="img-fluid chabanon" id="recto" src="assets/images/plaquette/Brochure-Savary.jpg" alt="Plaquette Savary de Beauregard - recto">
-<img class="img-fluid chabanon" id="verso" src="assets/images/plaquette/Brochure-Savary-verso.jpg" alt="Plaquette Savary de Beauregard - verso">
+<!-- <img class="img-fluid chabanon" id="recto" src="assets/images/plaquette/Brochure-Savary.jpg" alt="Plaquette Savary de Beauregard - recto">
+<img class="img-fluid chabanon" id="verso" src="assets/images/plaquette/Brochure-Savary-verso.jpg" alt="Plaquette Savary de Beauregard - verso"> -->
+<img class="img-fluid chabanon" src="{{album[1].thumb}}" (click)="open(1)" alt="Plaquette Savary de Beauregard - recto"/>
+<img class="img-fluid chabanon" src="{{album[2].thumb}}" (click)="open(2)" alt="Plaquette Savary de Beauregard - verso"/>
 
 </div>
 

@@ -1,3 +1,15 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class=" nav-item nav-link" routerLink="/communication/plaquettes" (click)="setTitle('ADCreativ - Plaquettes')">Plaquettes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/communication/PLV" (click)="setTitle('ADCreativ - PLV')">PLV</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/communication/pubs" (click)="setTitle('ADCreativ - Pubs')">Pubs</a>
+  </li>
+</ul>
+
 <h2>Création de logos</h2>
 
 <h4>Pams</h4>
@@ -5,20 +17,22 @@
 <div class="box">
 <p>Conception de l'identité visuelle, choix des couleurs et de la typographie du logo pour le mas <a href="https://www.tripadvisor.fr/Restaurant_Review-g1006582-d4590002-Reviews-Le_Pam_s-Port_Vendres_Pyrenees_Orientales_Occitanie.html" target="_blank">Le Pam's</a></p>
 
-<input type="checkbox" id="zoomPams">
-  <label for="zoomPams">
-<img class="img-fluid pams" src="assets/images/LOGOS/Logo-Pams.png" alt="Logo Mas Le Pam's">
-</label>
+<!-- <input type="checkbox" id="zoomPams">
+  <label for="zoomPams"> -->
+<!-- <img class="img-fluid pams" src="assets/images/LOGOS/Logo-Pams.png" alt="Logo Mas Le Pam's"> -->
+<!-- </label> -->
+<img class="img-fluid pams" src="{{album[0].thumb}}" (click)="open(0)" alt="Logo Mas Le Pam's"/>
 </div>
 
 
 <h4>Saint-Jean d'Aumières</h4>
 
 <div class="box">
-  <input type="checkbox" id="zoomAumieres">
+  <!-- <input type="checkbox" id="zoomAumieres">
   <label for="zoomAumieres">
     <img class="img-fluid aumieres" src="assets/images/LOGOS/Logo-SJA.png" alt="Logo Saint-Jean d'Aumières">
-  </label>
+  </label> -->
+  <img class="img-fluid aumieres" src="{{album[1].thumb}}" (click)="open(1)" alt="Logo Saint-Jean d'Aumières"/>
 <p>Refonte du logo à la demande du château <a href="https://saintjeandaumieres.com/" target="_blank">Saint-Jean d'Aumières</a></p>
 </div>
 
@@ -27,18 +41,20 @@
 <div class="box">
 <p>Conception du logo dans le respect de la charte graphique du domaine <a href="https://www.domainedemile-et-rose.fr/" target="_blank">Emile et Rose</a></p>
 
-<input type="checkbox" id="zoomEmileRose">
+<!-- <input type="checkbox" id="zoomEmileRose">
   <label for="zoomEmileRose">
     <img class="img-fluid emilerose" src="assets/images/LOGOS/Logo-Emile-Rose.png" alt="Logo du domaine Emile et Rose">
-  </label>
+  </label> -->
+  <img class="img-fluid emilerose" src="{{album[2].thumb}}" (click)="open(2)" alt="Logo du domaine Emile et Rose"/>
 </div>
 
 <h4>Domaine Roche</h4>
 
 <div class="box">
-  <input type="checkbox" id="zoomRoche">
+  <!-- <input type="checkbox" id="zoomRoche">
     <label for="zoomRoche">
       <img class="img-fluid roche" src="assets/images/LOGOS/Logo-Roche.png" alt="Logo du domaine Roche">
-    </label>
+    </label> -->
+    <img class="img-fluid roche" src="{{album[3].thumb}}" (click)="open(3)" alt="Logo du domaine Roche"/>
 <p>Création du logo pour le <a href="http://www.domaineroche.fr/index.php/fr/" target="_blank">domaine Roche</a></p>
 </div>

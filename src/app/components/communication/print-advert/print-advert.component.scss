@@ -8,57 +8,84 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-p, a {
+p {
     width: 60%;
     color: #b2b2b2;
     font-size: 20px;
     padding-right: 40px;
+    a {
+      color: #b2b2b2;
+      font-size: 20px;
+          &:hover {
+          text-decoration: none;
+          color: white;
+      }
+  }
 }
 
 img {
     height: 300px;
     width: auto;
     padding-right: 40px;
+    cursor:pointer;
 }
 
-#zoomCastel {
-    display: none;
-  }
+// #zoomCastel {
+//     display: none;
+//   }
 
-.castelbarry {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
+// .castelbarry {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
     
-}
+// }
 
-#zoomCastel:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomCastel:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-#zoomSilva {
-    display: none;
-  }
+// #zoomSilva {
+//     display: none;
+//   }
 
-.silva {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .silva {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomSilva:checked ~ label > img {
-    transform: translate(50px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomSilva:checked ~ label > img {
+//     transform: translate(50px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-#frelin {
-    height: auto;
-}
+// #frelin {
+//     height: auto;
+// }
 
 
 .box {
     display: flex;
     align-items:center;
     width: 80%;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+}
+
+a {
+  color:#696969;
+  font-size: 15px;
+  width: auto;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 640px){

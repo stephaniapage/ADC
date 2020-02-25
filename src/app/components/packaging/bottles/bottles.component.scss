@@ -8,11 +8,19 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-p, a {
+p {
     width: 60%;
     color: #b2b2b2;
     font-size: 20px;
     padding-right: 40px;
+    a {
+      color: #b2b2b2;
+      font-size: 20px;
+          &:hover {
+          text-decoration: none;
+          color: white;
+      }
+    }
 }
 
 img {
@@ -21,6 +29,24 @@ img {
     padding-right: 40px;
     cursor: pointer;
 }
+
+.nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+  }
+  
+  a {
+    color:#696969;
+    font-size: 15px;
+    width: auto;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
 
 // #zoomMontpeyroux1, #zoomMontpeyroux2 {
 //     display: none;

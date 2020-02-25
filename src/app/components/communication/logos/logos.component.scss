@@ -8,75 +8,84 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-p, a {
+p {
     width: 60%;
     color: #b2b2b2;
     font-size: 20px;
     padding-right: 40px;
+    a {
+      color: #b2b2b2;
+      font-size: 20px;
+          &:hover {
+          text-decoration: none;
+          color: white;
+      }
+  }
 }
 
 img {
     height: 300px;
     width: auto;
     padding-right: 40px;
+    cursor: pointer;
 }
 
-#zoomPams {
-    display: none;
-  }
+// #zoomPams {
+//     display: none;
+//   }
 
-.pams {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
+// .pams {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
     
-}
+// }
 
-#zoomPams:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomPams:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-  #zoomAumieres {
-    display: none;
-  }
+//   #zoomAumieres {
+//     display: none;
+//   }
 
-.aumieres {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .aumieres {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomAumieres:checked ~ label > img {
-    transform: translate(50px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomAumieres:checked ~ label > img {
+//     transform: translate(50px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-#zoomEmileRose {
-    display: none;
-  }
+// #zoomEmileRose {
+//     display: none;
+//   }
 
-.emilerose {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .emilerose {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomEmileRose:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomEmileRose:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
 
-#zoomRoche {
-    display: none;
-  }
+// #zoomRoche {
+//     display: none;
+//   }
 
-.roche {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
+// .roche {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
 
-#zoomRoche:checked ~ label > img {
-    transform: translate(50px) scale(2);
-    cursor: zoom-out;
-  }
+// #zoomRoche:checked ~ label > img {
+//     transform: translate(50px) scale(2);
+//     cursor: zoom-out;
+//   }
 
 
 .box {
@@ -93,4 +102,22 @@ img {
   p, a {
     width: 100%;
   }
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+}
+
+a {
+  color:#696969;
+  font-size: 15px;
+  width: auto;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
 }

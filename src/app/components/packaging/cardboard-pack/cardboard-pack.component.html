@@ -1,23 +1,37 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class=" nav-item nav-link" routerLink="/packaging/bouteilles" (click)="setTitle('ADCreativ - Bouteilles')">Bouteilles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/bibs" (click)="setTitle('ADCreativ - Bibs')">Bibs</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/huiledolive" (click)="setTitle('ADCreativ - Huile d Olive')">Huile d'Olive</a>
+  </li>
+</ul>
+
 <h2>Création de cartons pour les bouteilles</h2>
 
 <h4>Rhonéa</h4>
 
 <div class="box">
 <p>Conception du format des cartons, commande et suivi de production auprès de l'imprimerie pour la coopérative <a href="https://www.rhonea.fr/" target="_blank">Rhonéa</a></p>
-<input type="checkbox" id="zoomRhonea">
+<!-- <input type="checkbox" id="zoomRhonea">
   <label for="zoomRhonea">
 <img class="img-fluid rhonea" src="assets/images/carton/carton-rhonea.png" alt="Carton Rhonéa">
-</label>
+</label> -->
+<img class="img-fluid" src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Carton Rhonéa"/>
 </div>
 
 
 <h4>Daronton</h4>
 
 <div class="box">
-    <input type="checkbox" id="zoomDaronton">
+    <!-- <input type="checkbox" id="zoomDaronton">
   <label for="zoomDaronton">
 <img class="img-fluid daronton" src="assets/images/carton/carton-daronton.jpg" alt="Carton Daronton">
-    </label>
+    </label> -->
+    <img class="img-fluid" src="{{album[1].thumb}}" (click)="open(1)" alt="Carton Daronton"/>
 
 <p>Conception du graphisme et choix de la typographie des cartons à la demande du <a href="http://www.terroirdaronton.fr/" target="_blank">Terroir Daronton</a></p>
 </div>

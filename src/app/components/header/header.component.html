@@ -4,7 +4,8 @@
     <a routerLink="home" (click)="changeBGtoImage($event)"><img id="logoimg" src="assets\images\logo_ad-creativ_white.svg" alt="Logo"></a>
   </div>
   <div class="nav col-8">
-    <nav>
+    <!-- <nav> -->
+
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a class="nav-item nav-link" 
@@ -27,12 +28,66 @@
           aria-selected="false">Communication</a>
         </div>
       </nav>
-      <div class="tab-content" id="nav-tabContent">
+
+      <!-- <nav>
+        <ul class="nav nav-tabs">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+            data-toggle="dropdown" 
+            (click)="setTitle('ADCreativ - Packaging')"
+            (click)="changeBGtoBrown($event)"
+            routerLink="packaging" role="button" 
+            aria-haspopup="true" 
+            aria-expanded="false">Packaging</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="bouteilles" (click)="setTitle('ADCreativ - Bouteilles')">Bouteilles</a>
+              <a class="dropdown-item" routerLink="cartons" (click)="setTitle('ADCreativ - Cartons')">Cartons</a>
+              <a class="dropdown-item" routerLink="bibs" (click)="setTitle('ADCreativ - Bibs')">Bibs</a>
+              <a class="dropdown-item" routerLink="huiledolive" (click)="setTitle('ADCreativ - Huile d\'olive')">Huile d'Olive</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+            (click)="setTitle('ADCreativ - Communication')"
+            (click)="changeBGtoBrown($event)"
+            routerLink="communication" role="button" aria-haspopup="true" aria-expanded="false">Communication</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="plaquettes" (click)="setTitle('ADCreativ - Plaquettes')">Plaquettes</a>
+              <a class="dropdown-item" routerLink="logos" (click)="setTitle('ADCreativ - Logos')">Logos</a>
+              <a class="dropdown-item" routerLink="PLV" (click)="setTitle('ADCreativ - PLV')">PLV</a>
+              <a class="dropdown-item" routerLink="huiledolive" (click)="setTitle('ADCreativ - Pubs')">Pubs</a>
+            </div>
+          </li>
+          
+        </ul> -->
+        <!-- <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" 
+          id="nav-packaging-tab" 
+          data-toggle="tab"
+          (click)="setTitle('ADCreativ - Packaging')"
+          (click)="changeBGtoBrown($event)"
+          routerLink="packaging" 
+          role="tab" 
+          aria-controls="nav-packaging" 
+          aria-selected="false">Packaging</a>
+          <a class="nav-item nav-link" 
+          id="nav-communication-tab" 
+          data-toggle="tab" 
+          (click)="setTitle('ADCreativ - Communication')"
+          (click)="changeBGtoBrown($event)"
+          routerLink="communication" 
+          role="tab" 
+          aria-controls="nav-communication" 
+          aria-selected="false">Communication</a>
+        </div> -->
+      <!-- </nav> -->
+
+      <!-- <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
         <div class="tab-pane fade" id="nav-packaging" role="tabpanel" aria-labelledby="nav-packaging-tab"></div>
         <div class="tab-pane fade" id="nav-communication" role="tabpanel" aria-labelledby="nav-communication-tab"></div>
-      </div>
-    </nav>
+      </div> -->
+    <!-- </nav> -->
   </div>
 </div>
 </header>

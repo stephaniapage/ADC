@@ -1,3 +1,15 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class=" nav-item nav-link" routerLink="/communication/plaquettes" (click)="setTitle('ADCreativ - Plaquettes')">Plaquettes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/communication/logos" (click)="setTitle('ADCreativ - Logos')">Logos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/communication/pubs" (click)="setTitle('ADCreativ - Pubs')">Pubs</a>
+  </li>
+</ul>
+
 <h2>Création de publicités sur lieu de vente</h2>
 
 <h4>Terroir Daronton</h4>
@@ -5,20 +17,22 @@
 <div class="box">
 <p>Conception d'une affiche au format 85cm pour le stand du <a href="http://www.terroirdaronton.fr/" target="_blank">Terroir Daronton</a></p>
 
-<input type="checkbox" id="zoomDaronton">
+<!-- <input type="checkbox" id="zoomDaronton">
   <label for="zoomDaronton">
 <img class="img-fluid daronton" src="assets/images/PLV/Kakemono-Terroir1.jpg" alt="Kakemono Terroir Daronton">
-</label>
+</label> -->
+<img class="img-fluid daronton" src="{{album[0].thumb}}" (click)="open(0)" alt="Kakemono Terroir Daronton"/>
 </div>
 
 
 <h4>Castelbarry</h4>
 
 <div class="box">
-  <input type="checkbox" id="zoomCastel">
+  <!-- <input type="checkbox" id="zoomCastel">
   <label for="zoomCastel">
     <img class="img-fluid castelbarry" src="assets/images/PLV/Castelbarry-general.png" alt="Affiche Castelbarry">
-  </label>
+  </label> -->
+  <img class="img-fluid castelbarry" src="{{album[1].thumb}}" (click)="open(1)" alt="Affiche Castelbarry"/>
 <p>Conception d'une affiche au format 160x60cm pour le stand de la coopérative <a href="https://montpeyroux.org/" target="_blank">Castelbarry</a></p>
 </div>
 
@@ -27,8 +41,9 @@
 <div class="box">
 <p>Création d'un panneau publicitaire pour la coopérative <a href="https://www.rhonea.fr/" target="_blank">Rhonéa</a></p>
 
-<input type="checkbox" id="zoomRhonea">
+<!-- <input type="checkbox" id="zoomRhonea">
   <label for="zoomRhonea">
     <img class="img-fluid rhonea" src="assets/images/PLV/Rhonea-Kakemono.png" alt="Kakemono Rhonéa">
-  </label>
+  </label> -->
+  <img class="img-fluid rhonea" src="{{album[2].thumb}}" (click)="open(2)" alt="Kakemono Rhonéa"/>
 </div>

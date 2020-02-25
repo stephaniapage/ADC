@@ -1,28 +1,41 @@
+<ul class="nav">
+    <li class="nav-item">
+      <a class=" nav-item nav-link" routerLink="/packaging/bouteilles" (click)="setTitle('ADCreativ - Bouteilles')">Bouteilles</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-item nav-link" routerLink="/packaging/cartons" (click)="setTitle('ADCreativ - Cartons')">Cartons</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-item nav-link" routerLink="/packaging/huiledolive" (click)="setTitle('ADCreativ - Huile d Olive')">Huile d'Olive</a>
+    </li>
+  </ul>
+
 <h2>Création de cubis de vin</h2>
+
+<h4>Col du Vent</h4>
+
+<div class="box">
+
+<img class="img-fluid" src="{{album[0].thumb}}" (click)="open(0)" alt="Col du Vent"/>
+
+<p>Conception du style des cartons à la demande de la coopérative <a href="https://montpeyroux.org/" target="_blank">Castelbarry</a></p>
+</div>
 
 <h4>Castelcubi</h4>
 
 <div class="box">
 <p>Conception du format et du graphisme des cubis de vin, choix des couleurs pour la coopérative <a href="https://www.rhonea.fr/" target="_blank">Rhonéa</a></p>
 
-<!-- <input type="checkbox" id="zoomCastelcubi">
-  <label for="zoomCastelcubi">
-<img class="img-fluid castelcubi" src="assets/images/bib/castecubi10rg_.png" alt="Castelcubi">
-</label> -->
 
-<img src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Castelcubi"/>
+<img class="img-fluid" src="{{album[1].thumb}}" (click)="open(1)" alt="Castelcubi"/>
 </div>
 
 
 <h4>Les Coopains</h4>
 
 <div class="box">
-    <!-- <input type="checkbox" id="zoomCoopains">
-  <label for="zoomCoopains">
-<img class="img-fluid coopains" src="assets/images/bib/Castelbarry-BIB-3L-Les-Coopains.png" alt="Les Coopains">
-</label> -->
 
-<img src="{{album[1].thumb}}" (click)="open(1)" height= "300px" alt="Les Coopains"/>
+<img class="img-fluid" src="{{album[2].thumb}}" (click)="open(2)" alt="Les Coopains"/>
 
 <p>Conception du graphisme et choix de la typographie des cartons à la demande du <a href="http://www.terroirdaronton.fr/" target="_blank">Terroir Daronton</a></p>
 </div>

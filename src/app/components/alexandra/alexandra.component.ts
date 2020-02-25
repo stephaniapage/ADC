@@ -38,15 +38,14 @@ export class AlexandraComponent implements OnInit {
     console.log(salon);
     this.agendaService.create(salon).subscribe(
       (result: Salon) =>
-    this.create_success = {
-      id: result.id,
-      name: salon.name,
-      place: salon.place,
-      city: salon.city,
-      date: salon.date
-    }
+          this.create_success = {
+            id: result.id,
+            name: salon.name,
+            place: salon.place,
+            city: salon.city,
+            date: salon.date
+          }
     );
-
   }
 
   delete(salon:Salon){
@@ -56,13 +55,14 @@ export class AlexandraComponent implements OnInit {
       this.salons = this.salons.filter( s => s.id != salon.id);
       this.agendaService.delete(salon.id).subscribe(
         (result: Salon) =>
-        this.delete_success = {
-          id: result.id,
-              name: salon.name,
-              place: salon.place,
-              city: salon.city,
-              date: salon.date
-          });
+            this.delete_success = {
+                id: result.id,
+                    name: salon.name,
+                    place: salon.place,
+                    city: salon.city,
+                    date: salon.date
+                }
+      );
     }
   }
 

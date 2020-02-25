@@ -25,19 +25,30 @@ export class AuthComponent implements OnInit {
   }
   
   public auth() {
-    //le formulaire va appeler la méthode auth et passer ses valeurs dans les paramètres
+
+    //l'envoi du formulaire appele la méthode auth() et passe les valeurs des champs saisis dans les paramètres
+    
     this.authService.auth(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
-      //si l'authentification est validee, on ajoute le jwt dans le local storage
-      (result: any) => {localStorage.setItem('jwt', result.token); 
-      this.router.navigate(['alexandra'])},
-      (error: any) => {console.error("error")
-      if (error.status == 401){
-        this.authError = {
-          code: error.status,
-          message: 'Identifiant ou mot de passe invalides.'
-        }
-      } 
+      
+      //si l'authentification est validée, on ajoute le token dans le local storage par la méthode setItem()
+      // clé: 'jwt', valeur: le token lui-même
+
+        (result: any) => {localStorage.setItem('jwt', result.token); 
+
+      // si l'utilisateur parvient à se connecter, on le redirige vers la page Admin (composant 'alexandra')
+
+          this.router.navigate(['alexandra'])},
+
+      //En car de problème, si le code d'erreur est 401 (Unauthorized), on affiche un message générique pour
+      //indiquer que l'une des données saisies est incorrecte
+
+          (error: any) => {console.error("error")
+              if (error.status == 401){
+                  this.authError = {
+                      code: error.status,
+                      message: 'Identifiant ou mot de passe invalides.'
+                  }
+              } 
+          });
     }
-    );
-  }
 }

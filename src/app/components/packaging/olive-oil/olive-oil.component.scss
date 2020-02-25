@@ -8,46 +8,73 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-p, a {
+p {
     width: 60%;
     color: #b2b2b2;
     font-size: 20px;
     padding-right: 40px;
+    a {
+      color: #b2b2b2;
+      font-size: 20px;
+          &:hover {
+          text-decoration: none;
+          color: white;
+      }
+    }
 }
 
 img {
     height: 300px;
     width: auto;
     padding-right: 40px;
+    cursor: pointer;
 }
 
-#zoomRhonea {
-    display: none;
-  }
-
-.rhonea {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: 20px;
 }
 
-#zoomRhonea:checked ~ label > img {
-    transform: translate(-40px) scale(2);
-    cursor: zoom-out;
-  }
-
-#zoomPerdrix {
-    display: none;
-  }
-
-.perdrix {
-    transition: transform 0.5s ease;
-    cursor: zoom-in;
+a {
+  color:#696969;
+  font-size: 15px;
+  width: auto;
 }
 
-#zoomPerdrix:checked ~ label > img {
-    transform: translate(40px) scale(2);
-    cursor: zoom-out;
+a:hover {
+  text-decoration: none;
+  color: white;
 }
+
+// #zoomRhonea {
+//     display: none;
+//   }
+
+// .rhonea {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
+
+// #zoomRhonea:checked ~ label > img {
+//     transform: translate(-40px) scale(2);
+//     cursor: zoom-out;
+//   }
+
+// #zoomPerdrix {
+//     display: none;
+//   }
+
+// .perdrix {
+//     transition: transform 0.5s ease;
+//     cursor: zoom-in;
+// }
+
+// #zoomPerdrix:checked ~ label > img {
+//     transform: translate(40px) scale(2);
+//     cursor: zoom-out;
+// }
 
 .box {
     display: flex;

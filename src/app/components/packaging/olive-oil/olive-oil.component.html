@@ -1,3 +1,15 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class=" nav-item nav-link" routerLink="/packaging/bouteilles" (click)="setTitle('ADCreativ - Bouteilles')">Bouteilles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/cartons" (click)="setTitle('ADCreativ - Cartons')">Cartons</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-item nav-link" routerLink="/packaging/bibs" (click)="setTitle('ADCreativ - Bibs')">Bibs</a>
+  </li>
+</ul>
+
 <h2>Création d'étiquettes d'huile d'olive</h2>
 
 <h4>Rhonéa</h4>
@@ -5,20 +17,23 @@
 <div class="box">
 <p>Conception du format et du graphisme d'étiquettes d'huile d'olive, choix des couleurs pour la coopérative <a href="https://www.rhonea.fr/" target="_blank">Rhonéa</a></p>
 
-<input type="checkbox" id="zoomRhonea">
+<!-- <input type="checkbox" id="zoomRhonea">
   <label for="zoomRhonea">
 <img class="img-fluid rhonea" src="assets/images/HO/Rhonea-HO-bouchon.png" alt="Huile d'Olive Rhonéa">
-    </label>
+    </label> -->
+
+    <img class="img-fluid" src="{{album[0].thumb}}" (click)="open(0)" height= "300px" alt="Huile d'Olive Rhonéa"/>
 </div>
 
 
 <h4>Château Saint Louis La Perdrix</h4>
 
 <div class="box">
-    <input type="checkbox" id="zoomPerdrix">
+    <!-- <input type="checkbox" id="zoomPerdrix">
   <label for="zoomPerdrix">
 <img class="img-fluid perdrix" src="assets/images/HO/SLP-HO-50.png" alt="Huile d'Olive Saint Louis">
-    </label>
+    </label> -->
+    <img class="img-fluid" src="{{album[1].thumb}}" (click)="open(1)" height= "300px" alt="Huile d'Olive Saint Louis"/>
 
 <p>Conception du graphisme et choix de la typographie de l'étiquette de l'huile d'olive pour le Château <a href="https://saintlouislaperdrix.com/" target="_blank">Saint Louis La Perdrix</a></p>
 </div>

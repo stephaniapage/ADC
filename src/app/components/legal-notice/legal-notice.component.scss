@@ -13,25 +13,45 @@ p {
     gap: 50px;
 }
 
-#map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+// #map {
+//     overflow:hidden;
+//     padding-bottom:56.25%;
+//     position:relative;
+//     height:0;
 
-    iframe {
-        left:0;
-        padding-right: 10px;
-        top:0;
-        height:100%;
-        width:100%;
-        position:absolute;
-        }
-    }
+//     iframe {
+//         left:0;
+//         padding-right: 10px;
+//         top:0;
+//         height:100%;
+//         width:100%;
+//         position:absolute;
+//         }
+//     }
+
+iframe {
+    padding-right: 10px;
+}
     
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 768px){
         .box{
           display: block;
           width: 100%;
         }
+
+        #map {
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        
+            iframe {
+                left:0;
+                padding-right: 10px;
+                top:0;
+                height:100%;
+                width:100%;
+                position:absolute;
+                }
+            }
     }
